@@ -7,6 +7,10 @@ services:
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_FEATURE_TOGGLES_PROVISIONING=true
+      - GF_FEATURE_TOGGLES_KUBERNETESCLIENTDASHBOARDSFOLDERS=true
+      - GF_FEATURE_TOGGLES_KUBERNETESDASHBOARDS=true
+      - GF_FEATURE_TOGGLES_GRAFANAAPISERVERENSUREKUBECTLACCESS=true
     volumes:
       - ./grafana/config/custom.ini:/etc/grafana/custom.ini
       - grafana-storage:/var/lib/grafana
