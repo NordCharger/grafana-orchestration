@@ -8,7 +8,7 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
     volumes:
-      - ./grafana/config/custom.ini:/usr/share/grafana/custom.ini
+      - ./grafana/config/conf/custom.ini:/usr/share/grafana/custom.ini
       - grafana-storage:/var/lib/grafana
     restart: unless-stopped
     networks:
